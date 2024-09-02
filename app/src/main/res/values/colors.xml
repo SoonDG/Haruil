@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="haruil_blue">#337CE1</color>
+    <color name="haruil_red">#E13336</color>
 </resources>

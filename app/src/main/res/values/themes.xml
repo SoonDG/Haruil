@@ -6,4 +6,34 @@
     </style>
 
     <style name="Theme.Haruil" parent="Base.Theme.Haruil" />
+
+    <style name="Widget.Haruil.TextInputEditText.OutlinedBox" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:textColor">@color/haruil_blue</item>
+        <item name="android:textColorHint">@color/haruil_blue</item>
+    </style>
+
+    <style name="ThemeOverlay.Haruil.TextInputLayout.CursorColor" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="colorControlActivated">@color/haruil_blue</item>
+    </style>
+
+    <style name="Widget.Haruil.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="boxStrokeColor">@color/haruil_blue</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="endIconMode">custom</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="errorTextColor">@color/haruil_red</item>
+        <item name="hintEnabled">false</item>
+        <item name="passwordToggleEnabled">true</item>
+        <item name="android:theme">@style/ThemeOverlay.Haruil.TextInputLayout.CursorColor</item>
+    </style>
+
 </resources>

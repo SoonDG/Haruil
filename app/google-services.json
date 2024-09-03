@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "370422186215",
+    "project_id": "haruil",
+    "storage_bucket": "haruil.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370422186215:android:727b0eefdaf1b610942242",
+        "android_client_info": {
+          "package_name": "com.sundg.haruil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7J0dqLRvhdDHcCDZGClLy5J8n0Tnw6tI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

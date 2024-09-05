@@ -36,4 +36,13 @@
         <item name="android:theme">@style/ThemeOverlay.Haruil.TextInputLayout.CursorColor</item>
     </style>
 
+    <style name="Theme.Haruil.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Haruil.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Haruil.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

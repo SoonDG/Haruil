@@ -34,26 +34,28 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
             return insets;
         });
 
-        binding.loginBtnLogin.setOnClickListener((new View.OnClickListener() {
+        binding.loginBtnLogin.setOnClickListener((new View.OnClickListener() { //로그인 버튼 클릭 시
             @Override
             public void onClick(View view) {
                 String email = binding.loginTextEmail.getText().toString();
                 String password = binding.loginTextPassword.getText().toString();
-                presenter.emailLogin(email, password);
+                presenter.emailLogin(email, password); //presenter에게 입력한 이메일과 비밀번호 정보 전달.
             }
         }));
 
-        binding.loginBtnToRegister.setOnClickListener(new View.OnClickListener() {
+        binding.loginBtnToRegister.setOnClickListener(new View.OnClickListener() { //회원가입 버튼 클릭 시
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
+                startActivity(intent); //회원가입 화면으로 전환
             }
         });
     }
 
     public void toMain(){
-
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent); //메인 화면으로 이동
+        finish(); //로그인 성공 후 메인화면으로 이동 시 로그인 액티비티는 스택에서 제거
     }
 
     public void warningAuthenticationFailed(){

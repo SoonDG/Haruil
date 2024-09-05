@@ -11,10 +11,11 @@ import com.google.firebase.auth.FirebaseUser;
 public class User {
     private FirebaseAuth firebaseAuth;
     private FirebaseUser firebaseUser;
-    private String uid;
+    private String uid; //회원의 uid
 
     public User(){
         firebaseAuth = FirebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
     }
 
     public boolean emailLogin(String email, String password) {
@@ -33,6 +34,37 @@ public class User {
         else {
             return false;
         }
+    }
+
+    public void register(String email, String password){
+        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    firebaseUser = firebaseAuth.getCurrentUser();
+                    uid = firebaseUser.getUid();
+                }
+                else {
+
+                }
+            }
+        });
+    }
+
+    public boolean logout(){
+        if(firebaseUser != null)  {
+            firebaseAuth.signOut();
+            firebaseUser = null;
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public boolean getLoginState(){
+        if(firebaseUser != null) return true;
+        else return false;
     }
 
     public String getUid(){
